@@ -102,6 +102,10 @@ class PlaneII {
         }
         return ticket
     }
+
+    dataUser(name) {
+        return console.log("The name in PlaneII is => ", name)
+    }
 }
 
 let boing757 = new PlaneII("BG757", "Brown")
@@ -143,8 +147,180 @@ micar.drive()
 
 // 7. Crea una clase que haga uso de getters y setters
 
+class Computer {
+    /**
+     *
+     * @param {string} color Computer color
+     * @param {number} price Price of the computer
+     * @param {number} age   Date of fabrication
+     * @param {string} type  Type of computer
+     */
+    constructor(color, price, age, type) {
+        this.color = color
+        this.price = price
+        this.age = age
+        this.type = type
+    }
+
+    /**
+     * Return pc color
+     */
+    get color() {
+        return this.color
+    }
+
+    /**
+     * Return pc price
+     */
+    get price() {
+        return this.price
+    }
+
+    /**
+     * Return pc fabrication date
+     */
+    get age() {
+        return this.age
+    }
+
+    /**
+     * Return pc type
+     */
+    get type() {
+        return this.type
+    }
+
+    /**
+     * Void function set color
+     */
+    set color(color) {
+        this.color = color
+    }
+
+    /**
+     * Void function set price
+     */
+    set price(price) {
+        this.price = price
+    }
+
+    /**
+     * Void function set age
+     */
+    set age(age) {
+        this.age = age
+    }
+
+    /**
+     * Void function set type
+     */
+    set type(type) {
+        this.type = type
+    }
+}
 // 8. Modifica la clase con getters y setters para que use propiedades privadas
+
+class ComputerI {
+    #color
+    #price
+    #age
+    #type
+
+    /**
+     *
+     * @param {string} color Computer color
+     * @param {number} price Price of the computer
+     * @param {number} age   Date of fabrication
+     * @param {string} type  Type of computer
+     */
+    constructor(color, price, age, type) {
+        this.#color = color
+        this.#price = price
+        this.#age = age
+        this.#type = type
+    }
+
+    /**
+     * Return pc color
+     */
+    get color() {
+        return this.#color
+    }
+
+    /**
+     * Return pc price
+     */
+    get price() {
+        return this.#price
+    }
+
+    /**
+     * Return pc fabrication date
+     */
+    get age() {
+        return this.#age
+    }
+
+    /**
+     * Return pc type
+     */
+    get type() {
+        return this.#type
+    }
+
+    /**
+     * Void function set color
+     */
+    set color(color) {
+        this.#color = color
+    }
+
+    /**
+     * Void function set price
+     */
+    set price(price) {
+        this.#price = price
+    }
+
+    /**
+     * Void function set age
+     */
+    set age(age) {
+        this.#age = age
+    }
+
+    /**
+     * Void function set type
+     */
+    set type(type) {
+        this.#type = type
+    }
+}
 
 // 9. Utiliza los get y set y muestra sus valores
 
+let macbook = new ComputerI("Silver", 1999.99, 2024, "Laptop")
+console.log("Mackbook color: ", macbook.color)
+console.log("Macbook price: ", macbook.price)
+console.log("Macbook age: ", macbook.age)
+console.log("Macbook type: ", macbook.type)
+
+macbook.color = "Grey"
+macbook.price = 999.99
+macbook.age = 2022
+macbook.type = "AllinOne"
+
+console.log("Mackbook new color: ", macbook.color)
+console.log("Macbook new price: ", macbook.price)
+console.log("Macbook new age: ", macbook.age)
+console.log("Macbook new type: ", macbook.type)
+
 // 10. Sobrescribe un método de una clase que utilice herencia
+class Boing extends PlaneII {
+    dataUser(name) {
+        return console.log("Ahora se muestra otra info", name)
+    }
+}
+
+let myboing = new Boing("MB123456", "Silver")
+myboing.dataUser("Yoandy Doble Herrera")
