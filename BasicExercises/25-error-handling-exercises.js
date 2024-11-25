@@ -6,6 +6,13 @@ https://www.youtube.com/live/8p6SLAIgwZI?si=MS9o7qIhezx9NTQX&t=902
 
 // 1. Captura una excepción utilizando try-catch
 
+try {
+    a = [1, 2, 3, 4, 5, 6]
+    console.log(a[0] + Variable)
+} catch (error) {
+    console.log(error.message)
+}
+
 // 2. Captura una excepción utilizando try-catch y finally
 
 // 3. Lanza una excepción genérica
